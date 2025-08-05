@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="app-title">
+                <i class="fas fa-cloud-sun"></i>
+                Weather App
+            </h1>
+        </header>
+
+        <main class="main-content">
+            <!-- Search Section -->
+            <section class="search-section">
+                <div class="search-container">
+                    <div class="search-input-wrapper">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="cityInput" 
+                            class="search-input" 
+                            placeholder="Enter city name..."
+                            autocomplete="off"
+                        >
+                        <div class="suggestions-dropdown hidden" id="suggestionsDropdown">
+                            <!-- Suggestions will be populated here -->
+                        </div>
+                        <button id="searchBtn" class="search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="temperature-toggle">
+                        <button id="tempToggle" class="temp-toggle-btn" data-unit="metric">
+                            <span class="temp-unit active">°C</span>
+                            <span class="temp-unit">°F</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Loading State -->
+            <section class="loading-section hidden" id="loadingSection">
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
+                <p class="loading-text">Fetching weather data...</p>
+            </section>
+
+            <!-- Error State -->
+            <section class="error-section hidden" id="errorSection">
+                <div class="error-content">
+                    <i class="fas fa-exclamation-triangle error-icon"></i>
+                    <h3 class="error-title">Oops! Something went wrong</h3>
+                    <p class="error-message" id="errorMessage"></p>
+                    <button class="retry-btn" id="retryBtn">
+                        <i class="fas fa-redo"></i>
+                        Try Again
+                    </button>
+                </div>
+            </section>
+
+            <!-- Weather Display -->
+            <section class="weather-section hidden" id="weatherSection">
+                <div class="weather-card">
+                    <div class="weather-header">
+                        <div class="location-info">
+                            <h2 class="city-name" id="cityName"></h2>
+                            <p class="country-name" id="countryName"></p>
+                            <p class="date-time" id="dateTime"></p>
+                        </div>
+                        <div class="weather-icon-container">
+                            <img class="weather-icon" id="weatherIcon" alt="Weather Icon">
+                        </div>
+                    </div>
+
+                    <div class="weather-main">
+                        <div class="temperature-display">
+                            <span class="temperature" id="temperature"></span>
+                            <span class="temperature-unit" id="temperatureUnit">°C</span>
+                        </div>
+                        <div class="weather-description">
+                            <p class="description" id="weatherDescription"></p>
+                            <p class="feels-like">Feels like <span id="feelsLike"></span></p>
+                        </div>
+                    </div>
+
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Visibility</span>
+                                <span class="detail-value" id="visibility"></span>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-tint"></i>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Humidity</span>
+                                <span class="detail-value" id="humidity"></span>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Wind Speed</span>
+                                <span class="detail-value" id="windSpeed"></span>
+                            </div>
+                        </div>
+
+                        <div class="detail-item">
+                            <div class="detail-icon">
+                                <i class="fas fa-thermometer-half"></i>
+                            </div>
+                            <div class="detail-info">
+                                <span class="detail-label">Pressure</span>
+                                <span class="detail-value" id="pressure"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Welcome State -->
+            <section class="welcome-section" id="welcomeSection">
+                <div class="welcome-content">
+                    <i class="fas fa-map-marker-alt welcome-icon"></i>
+                    <h3 class="welcome-title">Welcome to Weather App</h3>
+                    <p class="welcome-message">Search for a city to get started with real-time weather information</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html
