@@ -15,7 +15,7 @@ A responsive weather application that shows current conditions for any location 
 - Font Awesome icons
 - Google Fonts (Poppins)
 
-## 📸 Screenshots
-<div align="center">
-  <img src="./screenshot-2025-08-05 at 6.58.01 PM.png" width="45%">
-  </div>
+## 🌟 Screenshots
+
+Desktop View 
+| ![Desktop Screenshot](./.png) | 
