@@ -18,4 +18,6 @@ A responsive weather application that shows current conditions for any location 
 ## 🌟 Screenshots
 
 Desktop View 
-| ![Desktop Screenshot](./.png) | 
+| ![Desktop Screenshot](./ssfirst.png) | 
+| ![Desktop Screenshot](./sssecond.png) | 
+| ![Desktop Screenshot](./ssthird.png) | 
