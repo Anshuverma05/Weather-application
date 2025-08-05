@@ -15,5 +15,8 @@ A responsive weather application that shows current conditions for any location 
 - Font Awesome icons
 - Google Fonts (Poppins)
 
-## 🎥 Demo
-https://user-images.githubusercontent.com/weather-application/weather_app.mp4
+## 📸 Screenshots
+<div align="center">
+  <img src="./screenshot-desktop.png" width="45%">
+  <img src="./screenshot-mobile.png" width="20%">
+</div>
