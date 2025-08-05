@@ -1,4 +1,4 @@
-# 🌤️ Weather App with Geolocation
+# PRODIGY_WD_05 
 
 A responsive weather application that shows current conditions for any location with city search and geolocation.
 
