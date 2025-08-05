@@ -17,6 +17,5 @@ A responsive weather application that shows current conditions for any location 
 
 ## 📸 Screenshots
 <div align="center">
-  <img src="./screenshot-desktop.png" width="45%">
-  <img src="./screenshot-mobile.png" width="20%">
-</div>
+  <img src="./screenshot-2025-08-05 at 6.58.01 PM.png" width="45%">
+  </div>
